@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/geildankevr-utils.spec.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">src/</a> geildankevr-utils.spec.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>63/63</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">96.55% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>28/29</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>63/63</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* eslint-disable max-len */
+(function () {
+  'use strict';
+&nbsp;
+  beforeEach(function () {
+    jasmine.addMatchers({
+      toBeBoolean: function () {
+        return {
+          compare: function (actual) {
+            return {
+              pass: typeof actual === 'boolean',
+              message: 'Expected ' + actual + ' is not boolean'
+            };
+          }
+        };
+      }
+    });
+  });
+&nbsp;
+  describe('GEIDLANKEVR.utils', function () {
+    it('the namespace is GEILDANKEVR.utils', function () {
+      expect(typeof GEILDANKEVR.utils).toBe('object');
+    });
+&nbsp;
+    it('has method .degreeToRadians()', function () {
+      expect(typeof GEILDANKEVR.utils.degreeToRadians).toBe('function');
+    });
+&nbsp;
+    it('has method .errorChecker()', function () {
+      expect(typeof GEILDANKEVR.utils.errorChecker).toBe('function');
+    });
+&nbsp;
+    it('has method .getVrDisplayMode()', function () {
+      expect(typeof GEILDANKEVR.utils.getVrDisplayMode).toBe('function');
+    });
+&nbsp;
+    it('has method .handleLookat()', function () {
+      expect(typeof GEILDANKEVR.utils.handleLookat).toBe('function');
+    });
+&nbsp;
+    it('has method .getCanvasDimensions()', function () {
+      expect(typeof GEILDANKEVR.utils.getCanvasDimensions).toBe('function');
+    });
+&nbsp;
+    it('has method .getElementPosition()', function () {
+      expect(typeof GEILDANKEVR.utils.getElementPosition).toBe('function');
+    });
+&nbsp;
+    it('returns a number when degreeToRadians is called with a number', function () {
+      let radian = GEILDANKEVR.utils.degreeToRadians(90);
+&nbsp;
+      expect(typeof radian).toBe('number');
+    });
+&nbsp;
+    it('returns an object when getCanvasDimensions was called', function () {
+      let canvasDimenstions = GEILDANKEVR.utils.getCanvasDimensions();
+&nbsp;
+      expect(typeof canvasDimenstions).toBe('object');
+    });
+&nbsp;
+    it('returns an object when getElementPosition was called with an object', function () {
+      let element = document.createElement('div'),
+        elementPosition = GEILDANKEVR.utils.getElementPosition(element);
+&nbsp;
+      expect(typeof elementPosition).toBe('object');
+    });
+&nbsp;
+    it('changes degrees to radians', function () {
+      let radian = GEILDANKEVR.utils.degreeToRadians(90);
+&nbsp;
+      expect(radian).toBe(1.5707963267948966);
+    });
+&nbsp;
+    it('throws an error, when errorChecker is called with a falsy object', function () {
+      let failFunction = function () {
+          GEILDANKEVR.utils.errorChecker(false);
+        },
+        successFunction = function () {
+          GEILDANKEVR.utils.errorChecker(true);
+        };
+&nbsp;
+      expect(failFunction).toThrowError('Arguments are not correct.');
+      expect(successFunction).not.toThrowError();
+    });
+&nbsp;
+    it('returns a boolean when getVrDisplayMode is called', function () {
+      let vrDisplayMode = GEILDANKEVR.utils.getVrDisplayMode();
+&nbsp;
+      expect(vrDisplayMode).toBeBoolean();
+    });
+&nbsp;
+    it('handleLookat calls the errorChecker function', function () {
+      let element = {
+          object: {
+            visible: false
+          }
+        },
+        lookAtArguments = {},
+        lookAtConfig = {},
+        lookAwayArguments = {};
+&nbsp;
+      lookAtConfig = {
+        element: element,
+        lookAt: function () {},
+        lookAtArguments: lookAtArguments,
+        lookAway: <span class="fstat-no" title="function not covered" >function () {</span>},
+        lookAwayArguments: lookAwayArguments
+      };
+&nbsp;
+      spyOn(GEILDANKEVR.utils, 'errorChecker').and.callThrough();
+      GEILDANKEVR.utils.handleLookat(lookAtConfig);
+      expect(GEILDANKEVR.utils.errorChecker).toHaveBeenCalled();
+    });
+&nbsp;
+    describe('setVrDisplayMode', function () {
+      it('sets vrDisplayMode to true when isPresenting is true', function () {
+        GEILDANKEVR.utils.setVrDisplayMode(true);
+        expect(GEILDANKEVR.utils.getVrDisplayMode()).toBe(true);
+      });
+&nbsp;
+      it('sets vrDisplayMode to false when isPresenting is false', function () {
+        GEILDANKEVR.utils.setVrDisplayMode(false);
+        expect(GEILDANKEVR.utils.getVrDisplayMode()).toBe(false);
+      });
+    });
+&nbsp;
+    it('isPortraitMode returns a boolean', function () {
+      let isPortraitMode = GEILDANKEVR.utils.isPortraitMode();
+&nbsp;
+      expect(isPortraitMode).toBeBoolean();
+    });
+&nbsp;
+    it('isLandscapeMode returns a boolean', function () {
+      let isLandscapeMode = GEILDANKEVR.utils.isLandscapeMode();
+&nbsp;
+      expect(isLandscapeMode).toBeBoolean();
+    });
+&nbsp;
+    it('isFullscreen returns a boolean', function () {
+      let isFullscreen = GEILDANKEVR.utils.isFullscreen();
+&nbsp;
+      expect(isFullscreen).toBeBoolean();
+    });
+  });
+}());
+/* eslint-enable max-len */
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Jan 06 2017 13:20:59 GMT+0100 (CET)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

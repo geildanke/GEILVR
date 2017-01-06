@@ -1,0 +1,1010 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/geildankevr-utils.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">src/</a> geildankevr-utils.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">79.17% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>76/96</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">69.23% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>27/39</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">83.33% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>20/24</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">79.17% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>76/96</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">43×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">4000×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2000×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">47×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+window.GEILDANKEVR.utils = (function () {
+  let SCOPE = {},
+    createCrosshairRaycaster = {},
+    createPointerRaycaster = {},
+    getOrientation = {},
+    init = {},
+    isVrDisplayMode = false,
+    mouse2d = new THREE.Vector2(),
+    mouse3d = new THREE.Vector3(),
+    onMouseMove = {};
+&nbsp;
+  /**
+   * Creates a Raycaster from Camera
+   * @param  { number } delayTimeout timeout in ms
+   * @param  { object } object to intersect with
+   * @param  { Function } callback function what happens when nothing is intersecting
+   * @return { void }
+   */
+  createCrosshairRaycaster = <span class="fstat-no" title="function not covered" >function (delayTimeout, object, callback) {</span>
+<span class="cstat-no" title="statement not covered" >    let camera = {},</span>
+      lookatIntervalId = {},
+      raycaster = {};
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    raycaster = new THREE.Raycaster();</span>
+<span class="cstat-no" title="statement not covered" >    camera = GEILDANKEVR.stage.getStage().camera;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    lookatIntervalId = window.setInterval(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >      let intersects = [];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      raycaster.set(camera.getWorldPosition(), camera.getWorldDirection());</span>
+<span class="cstat-no" title="statement not covered" >      intersects = raycaster.intersectObject(object);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (intersects.length === 0) {</span>
+<span class="cstat-no" title="statement not covered" >        callback();</span>
+<span class="cstat-no" title="statement not covered" >        clearTimeout(delayTimeout);</span>
+<span class="cstat-no" title="statement not covered" >        clearInterval(lookatIntervalId);</span>
+      }
+    }, 50);
+  };
+&nbsp;
+  /**
+   * Creates a Raycaster from Pointer and Camera
+   * @param  { number } delayTimeout timeout in ms
+   * @param  { object } object to intersect with
+   * @param  { Function } callback function what happens when nothing is intersecting
+   * @return { void }
+   */
+  createPointerRaycaster = function (delayTimeout, object, callback) {
+    let camera = {},
+      lookatIntervalId = {},
+      raycaster = {};
+&nbsp;
+    raycaster = new THREE.Raycaster();
+    camera = GEILDANKEVR.stage.getStage().camera;
+&nbsp;
+    lookatIntervalId = window.setInterval(function () {
+      let intersects = [];
+&nbsp;
+      raycaster.setFromCamera(mouse2d, camera);
+      intersects = raycaster.intersectObject(object);
+&nbsp;
+      <span class="missing-if-branch" title="else path not taken" >E</span>if (intersects.length === 0) {
+        callback();
+        clearTimeout(delayTimeout);
+        clearInterval(lookatIntervalId);
+      }
+    }, 50);
+  };
+&nbsp;
+  /**
+   * Returns cross browser screen.orientation object
+   * @return { object } screen.orientation
+   */
+  getOrientation = function () {
+    let orientation = {};
+&nbsp;
+    orientation = screen.orientation.type ||
+<span class="branch-1 cbranch-no" title="branch not covered" >      screen.mozOrientation.type </span>||
+<span class="branch-2 cbranch-no" title="branch not covered" >      screen.msOrientation.type;</span>
+    return orientation;
+  };
+&nbsp;
+  /**
+   * Initialize utils
+   * @return { void }
+   */
+  init = function () {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (GEILDANKEVR.mobileDetection &amp;&amp;
+        GEILDANKEVR.mobileDetection.isMobile() === false) {
+      document.addEventListener('mousemove', onMouseMove, false);
+    }
+  };
+&nbsp;
+  /**
+   * Get Mouse Position on MouseMove
+   * @param  { object } event mousemove event
+   * @return { void }
+   */
+  onMouseMove = <span class="fstat-no" title="function not covered" >function (event) {</span>
+<span class="cstat-no" title="statement not covered" >    let camera = GEILDANKEVR.stage.getStage().camera,</span>
+      canvas = GEILDANKEVR.stage.getStage().container,
+      offsetX = GEILDANKEVR.utils.getElementPosition(canvas).x,
+      offsetY = GEILDANKEVR.utils.getElementPosition(canvas).y,
+      viewHeight = GEILDANKEVR.utils.getCanvasDimensions().height,
+      viewWidth = GEILDANKEVR.utils.getCanvasDimensions().width;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    event.preventDefault();</span>
+    // calculate mouse position in normalized device coordinates
+    // (-1 to +1) for both components
+<span class="cstat-no" title="statement not covered" >    mouse2d.x = (event.clientX - offsetX) / viewWidth * 2 - 1;</span>
+<span class="cstat-no" title="statement not covered" >    mouse2d.y = -(event.clientY - offsetY) / viewHeight * 2 + 1;</span>
+<span class="cstat-no" title="statement not covered" >    mouse3d = new THREE.Vector3(mouse2d.x, mouse2d.y, 0.5).unproject(camera);</span>
+  };
+&nbsp;
+  /**
+   * Converts degrees to radians
+   * @param  { number } degrees to convert in radians
+   * @return { number } radians
+   */
+  SCOPE.degreeToRadians = function (degrees) {
+    return degrees * Math.PI / 180;
+  };
+&nbsp;
+  /**
+   * Checks if the argument is not false
+   * @param  { Boolean } isValid argument to be checked
+   * @return { void }
+   */
+  SCOPE.errorChecker = function (isValid) {
+    if (!isValid) {
+      throw new Error('Arguments are not correct.');
+    }
+  };
+&nbsp;
+  /**
+   * Get the canvas dimensions
+   * @return { object } width and height of canvas
+   */
+  SCOPE.getCanvasDimensions = function () {
+    let height = 0,
+      width = 0;
+&nbsp;
+    width = GEILDANKEVR.stage.getStage().container.clientWidth;
+    height = GEILDANKEVR.stage.getStage().container.clientHeight;
+&nbsp;
+    return {
+      height: height,
+      width: width
+    };
+  };
+&nbsp;
+  /**
+   * Returns the offset position of an element
+   * @param  { object } el element to get the offset values from
+   * @return { object } offset x and y of the element
+   */
+  SCOPE.getElementPosition = function (el) {
+    let rect = el.getBoundingClientRect(),
+      scrollLeft = 0,
+      scrollTop = 0;
+&nbsp;
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+&nbsp;
+    return {
+      x: rect.left + scrollLeft,
+      y: rect.top + scrollTop
+    };
+  };
+&nbsp;
+  /**
+   * Returns a random integer beween both parameters
+   * @param { number } min integer
+   * @param { number } max integer
+   * @return { number } random integer
+   */
+  SCOPE.getRandomInteger = function (min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  };
+&nbsp;
+  /**
+   * Returns a random gauss number
+   * @param { number } median for gauss number
+   * @param { number } variance for gauss number
+   * @param { number } cove for gauss number
+   * @return { number } gauss number
+   */
+  SCOPE.getRandomGauss = function (median, variance, cove) {
+    return variance * Math.pow(Math.random() - 0.5, cove) + median;
+  };
+&nbsp;
+  /**
+   * Returns vr display mode
+   * @return { boolean } vr display mode active true or false
+   */
+  SCOPE.getVrDisplayMode = function () {
+    return isVrDisplayMode;
+  };
+&nbsp;
+  /**
+   * Returns true, if app runs in fullscreen
+   * @return { Boolean } false if app is not in fullscreen
+   */
+  SCOPE.isFullscreen = function () {
+    let fullscreen = false;
+&nbsp;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (document.webkitFullscreenElement !== null &amp;&amp;
+<span class="branch-1 cbranch-no" title="branch not covered" >      document.mozFullScreenElement !== null)</span> {
+<span class="cstat-no" title="statement not covered" >      fullscreen = true;</span>
+    }
+    return fullscreen;
+  };
+&nbsp;
+  /**
+   * Returns a boolean depending user is in landscape mode or not
+   * @return { Boolean } isLandscapeMode
+   */
+  SCOPE.isLandscapeMode = function () {
+    let isLandscapeMode = false,
+      orientation = getOrientation();
+&nbsp;
+&nbsp;
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (orientation === 'landscape-primary' || <span class="branch-1 cbranch-no" title="branch not covered" >orientation === 'landscape-secondary')</span> {
+      isLandscapeMode = true;
+    }
+    return isLandscapeMode;
+  };
+&nbsp;
+  /**
+   * Returns a boolean depending user is in portrait mode or not
+   * @return { Boolean } isPortraitMode
+   */
+  SCOPE.isPortraitMode = function () {
+    let isPortraitMode = false,
+      orientation = getOrientation();
+&nbsp;
+&nbsp;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (orientation === 'portrait-primary' || orientation === 'portrait-secondary') {
+<span class="cstat-no" title="statement not covered" >      isPortraitMode = true;</span>
+    }
+    return isPortraitMode;
+  };
+&nbsp;
+  /**
+   * Takes an object and two functions with parameters
+   * to handle a user's look at the object
+   * First function and params are executed when user looks at object.
+   * Second function and params are executed when user looks away again.
+   * @param  { object } config object holding the object to check for a look at,
+   * the lookAt function and its arguments and
+   * the lookAway function ant its arguments
+   * @return { void }
+   */
+  SCOPE.handleLookat = function (config) {
+    let delayTimeout,
+      isValid = false;
+&nbsp;
+    isValid = typeof config === 'object' &amp;&amp;
+      typeof config.element === 'object' &amp;&amp;
+      typeof config.lookAt === 'function' &amp;&amp;
+      typeof config.lookAtArguments === 'object' &amp;&amp;
+      typeof config.lookAway === 'function' &amp;&amp;
+      typeof config.lookAwayArguments === 'object';
+&nbsp;
+    GEILDANKEVR.utils.errorChecker(isValid);
+    if (config.delay) {
+      delayTimeout = setTimeout(() =&gt; {
+        config.lookAt(config.lookAtArguments);
+      }, config.delay);
+    } else {
+      config.lookAt(config.lookAtArguments);
+    }
+&nbsp;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (GEILDANKEVR.mobileDetection.isMobile() === true) {
+<span class="cstat-no" title="statement not covered" >      createCrosshairRaycaster(delayTimeout, config.element.object, <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        config.lookAway(config.lookAwayArguments);</span>
+      });
+    } else {
+      createPointerRaycaster(delayTimeout, config.element.object, function () {
+        config.lookAway(config.lookAwayArguments);
+      });
+    }
+  };
+&nbsp;
+  /**
+   * Sets the vr display mode
+   * @param { boolean } isPresenting event object vrdisplaypresentchange.detail.vrdisplay
+   * @return { void }
+   */
+  SCOPE.setVrDisplayMode = function (isPresenting) {
+    isVrDisplayMode = isPresenting;
+  };
+&nbsp;
+  /**
+   * Returns the Mouse Pointer Vector
+   * @return { Object } Vector2
+   */
+  SCOPE.getMouse2d = function () {
+    return mouse2d;
+  };
+&nbsp;
+  /**
+   * Returns the Mouse Vector in 3d Space
+   * @return { Object } Vector3
+   */
+  SCOPE.getMouse3d = function () {
+    return mouse3d;
+  };
+&nbsp;
+  init();
+&nbsp;
+  return SCOPE;
+}());
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Jan 06 2017 13:20:59 GMT+0100 (CET)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
